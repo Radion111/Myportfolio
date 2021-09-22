@@ -126,7 +126,8 @@ ul {
 @font-face {
   font-family: "BebasNeue Bold";
   font-display: swap;
-  src: url("../fonts/BebasNeue Bold.woff") format("woff"), url("../fonts/BebasNeue Bold.woff2") format("woff2");
+  src: url("../fonts/BebasNeue Bold.woff") format("woff"),
+    url("../fonts/BebasNeue Bold.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -134,7 +135,8 @@ ul {
 @font-face {
   font-family: "Emily Lime";
   font-display: swap;
-  src: url("../fonts/Emily Lime - Bergamot Frames A.woff") format("woff"), url("../fonts/Emily Lime - Bergamot Frames A.woff2") format("woff2");
+  src: url("../fonts/Emily Lime - Bergamot Frames A.woff") format("woff"),
+    url("../fonts/Emily Lime - Bergamot Frames A.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -142,7 +144,8 @@ ul {
 @font-face {
   font-family: "platonicknormal";
   font-display: swap;
-  src: url("../fonts/platonicknormal.woff") format("woff"), url("../fonts/platonicknormal.woff2") format("woff2");
+  src: url("../fonts/platonicknormal.woff") format("woff"),
+    url("../fonts/platonicknormal.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -150,7 +153,8 @@ ul {
 @font-face {
   font-family: "Roboto-Bold";
   font-display: swap;
-  src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
+  src: url("../fonts/Roboto-Bold.woff") format("woff"),
+    url("../fonts/Roboto-Bold.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -158,7 +162,8 @@ ul {
 @font-face {
   font-family: "Roboto-BoldItalic";
   font-display: swap;
-  src: url("../fonts/Roboto-BoldItalic.woff") format("woff"), url("../fonts/Roboto-BoldItalic.woff2") format("woff2");
+  src: url("../fonts/Roboto-BoldItalic.woff") format("woff"),
+    url("../fonts/Roboto-BoldItalic.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -169,11 +174,10 @@ body {
 }
 
 .wrapper {
-  height: 100%;
   position: relative;
   top: 0px;
   left: 0px;
-  overflow-x: hidden;
+
   width: 100%;
   margin: 0 auto;
   background-color: #0088cc;
@@ -189,7 +193,7 @@ body {
   }
 
   100% {
-    background-position: 0% 90%;
+    background-position: 220% 90%;
   }
 }
 
@@ -250,7 +254,7 @@ body {
   left: 0px;
   height: 50px;
   border-radius: 50%;
-  background-color: #E6EDF2;
+  background-color: #e6edf2;
 }
 
 .header__logoimg:hover:before {
@@ -270,7 +274,7 @@ body {
   border-radius: 25px;
   box-shadow: 0px 0px 0px 0px;
   color: white;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .header__nav.active {
@@ -320,7 +324,7 @@ body {
   color: #0088cc;
   border-radius: 25px;
   transition: all 0.3s linear;
-  background-color: #E6EDF2;
+  background-color: #e6edf2;
   box-shadow: 0px 0px 0px 0px;
 }
 
@@ -348,7 +352,7 @@ body {
   border-radius: 25px;
   box-shadow: 0px 0px 0px 0px;
   color: white;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 @-webkit-keyframes anim-shadow {
@@ -472,10 +476,10 @@ body {
 .myslider {
   margin-top: 80px;
   height: 100vh;
-  background: linear-gradient(45deg, #00F260, #283c86, #2193b0, #283c86, #0575E6, #2F80ED, #56CCF2, #65C7F7);
+  background: linear-gradient(45deg, #d8cb17, #0da1db, #24cf15);
   background-size: 400% 400%;
   -webkit-animation: mywrap 10s ease-in-out infinite;
-          animation: mywrap 10s ease-in-out infinite;
+  animation: mywrap 10s ease-in-out infinite;
 }
 
 .myslider__body {
@@ -505,7 +509,7 @@ body {
 
 .myslider__img img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -539,7 +543,7 @@ body {
   height: 48px;
   font-size: 18px;
   left: 150px;
-  margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
   z-index: 10;
   cursor: pointer;
   display: flex;
@@ -572,7 +576,7 @@ body {
   border-radius: 50%;
   height: 48px;
   font-size: 18px;
-  margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
   z-index: 10;
   cursor: pointer;
   display: flex;
@@ -676,7 +680,12 @@ body {
   border: 1px solid #fff;
   border-radius: 20px;
 }
-
+@media (max-width: 350px) {
+  .skills__atab {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+}
 .skills__atab:first-child {
   margin-right: 20px;
 }
@@ -877,7 +886,7 @@ body {
   border-radius: 25px;
   box-shadow: 0px 0px 0px 0px;
   color: white;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .portfolio__showmore {
@@ -961,7 +970,7 @@ body {
   color: #0088cc;
   border-radius: 25px;
   transition: all 0.3s linear;
-  background-color: #E6EDF2;
+  background-color: #e6edf2;
   box-shadow: 0px 0px 0px 0px;
 }
 
@@ -989,7 +998,7 @@ body {
   border-radius: 25px;
   box-shadow: 0px 0px 0px 0px;
   color: white;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .contact__row {
