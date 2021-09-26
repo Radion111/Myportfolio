@@ -97,7 +97,12 @@ $(document).ready(function () {
   });
 });
 $(document).ready(function () {
-  $(".contact__link").hover(function () {
-    $(this).find(".contact__opacitytext").slideToggle(300);
-  });
+  $(".contact__link").hover(
+    function () {
+      $(this).find(".contact__opacitytext").slideToggle(300);
+    },
+    function () {
+      $(this).find(".contact__opacitytext").slideToggle(300);
+    }
+  );
 });
