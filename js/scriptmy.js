@@ -1,11 +1,14 @@
-// для медленого скрола
-$(document).ready(function () {
-  $(".portfolio__showmore").click(function () {
-    $(".portfolio__addallfiles").addClass("active");
-    $(".portfolio__showmore").addClass("active");
-  });
-});
+// Кнопка показать больше Showmore чистый джеес
 
+let showmore = document.querySelector(".portfolio__showmore");
+showmore.addEventListener("click", showMore);
+function showMore() {
+  showmore.classList.add("active");
+  document.querySelector(".portfolio__addallfiles").classList.add("active");
+}
+
+
+// Метод ibg
 function ibg() {
   $.each($(".ibg"), function (index, val) {
     if ($(this).find("img").length > 0) {
@@ -60,16 +63,19 @@ $(document).ready(function () {
   });
 });
 
-// burger menu
-
 // Для картинок
 
-$(document).ready(function () {
-  $(".burger-menu").click(function (event) {
-    $(".burger-menu,.header__nav").toggleClass("active");
-    $("body").toggleClass("lock");
-  });
-});
+//! burger menu на чистом js
+
+let burgermenu = document.querySelector(".burger-menu");
+burgermenu.addEventListener("click", burgerMenu);
+function burgerMenu() {
+  burgermenu.classList.toggle("active");
+  document.querySelector(".header__nav").classList.toggle("active");
+  document.getElementsByTagName("body")[0].classList.toggle("active");
+}
+
+// ! Для бургер меню
 
 // Для табов СТАРАЯ ВЕРСИЯ
 $(document).ready(function () {
