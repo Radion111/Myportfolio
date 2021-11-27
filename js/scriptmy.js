@@ -7,7 +7,6 @@ function showMore() {
   document.querySelector(".portfolio__addallfiles").classList.add("active");
 }
 
-
 // Метод ibg
 function ibg() {
   $.each($(".ibg"), function (index, val) {
