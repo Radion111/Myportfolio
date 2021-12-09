@@ -9,14 +9,13 @@ function showMore() {
 
 // Метод ibg
 function ibg() {
-  $.each($(".ibg"), function (index, val) {
-    if ($(this).find("img").length > 0) {
-      $(this).css(
-        "background-image",
-        'url("' + $(this).find("img").attr("src") + '")'
-      );
+  let ibg = document.querySelectorAll(".ibg");
+  for (var i = 0; i < ibg.length; i++) {
+    if (ibg[i].querySelector("img")) {
+      ibg[i].style.backgroundImage =
+        "url(" + ibg[i].querySelector("img").getAttribute("src") + ")";
     }
-  });
+  }
 }
 
 ibg();
@@ -45,7 +44,8 @@ const swiperrr = new Swiper(".swiper-container", {
 });
 
 // для медленого перехода между прогрузками
-
+// ! для медленой загрузки нужно знать роботу с пикселями пройти пару видосиков и зделать
+// Это!!
 $(document).ready(function () {
   $(".header__a").click(function (e) {
     e.preventDefault();
@@ -77,16 +77,30 @@ function burgerMenu() {
 // ! Для бургер меню
 
 // Для табов СТАРАЯ ВЕРСИЯ
-$(document).ready(function () {
-  $(".skills__atab").click(function (e) {
-    e.preventDefault();
-    $(".skills__atab").removeClass("active");
-    $(".skills__connecttab").removeClass("active");
-    $(this).addClass("active");
-    $($(this).attr("href")).addClass("active");
-  });
-  $(".skills__atab:first").click();
+// ! как лутше написать перемение в функции и визвать функцию из вне
+// или перемен
+
+let tablinka = document.querySelector(".skills__atab");
+let connect_tabs = document.querySelectorAll(".skills__connecttab");
+
+tablinka.forEach((my) => {
+  this.addEventListener("click", f4);
 });
+
+function f4() {
+  alert("hello world");
+}
+
+// $(document).ready(function () {
+//   $(".skills__atab").click(function (e) {
+//     e.preventDefault();
+//     $(".skills__atab").removeClass("active");
+//     $(".skills__connecttab").removeClass("active");
+//     $(this).addClass("active");
+//     $($(this).attr("href")).addClass("active");
+//   });
+//   $(".skills__atab:first").click();
+// });
 
 $(document).ready(function () {
   $(".about-me__aa").click(function (e) {
