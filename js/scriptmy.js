@@ -124,4 +124,6 @@ $(document).ready(function () {
       $(this).find(".contact__opacitytext").slideToggle(300);
     }
   );
+  
 });
+ 
