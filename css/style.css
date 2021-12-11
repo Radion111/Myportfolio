@@ -9,8 +9,6 @@
   border: 0;
 }
 
-
-
 *,
 *:before,
 *:after {
@@ -1153,7 +1151,17 @@ body {
   right: 24px;
   color: #11c459;
   font-size: 20px;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+.contact__opacitytext.active {
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  visibility: visible;
+  opacity: 1;
 }
 
 .footer {

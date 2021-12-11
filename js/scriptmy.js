@@ -80,50 +80,53 @@ function burgerMenu() {
 // ! как лутше написать перемение в функции и визвать функцию из вне
 // или перемен
 
+//! Заготовка табов на чистом js
+
 let tablinka = document.querySelectorAll(".skills__atab");
 let connect_tabs = document.querySelectorAll(".skills__connecttab");
 
-tablinka.forEach((my) => {
-  this.addEventListener("click", function tabsFunction() {
-    this.classList.add("active");
+tablinka.forEach(function (item) {
+  item.addEventListener("click", function (e) {
+    e.preventDefault;
+    let data = e.target.getAttribute("href").replace("#", "");
+
+    tablinka.forEach((child) => {
+      child.classList.remove("active");
+    });
+
+    connect_tabs.forEach((child) => {
+      child.classList.remove("active");
+    });
+
+    item.classList.add("active");
+
+    document.getElementById(data).classList.add("active");
   });
+  document.querySelector(".skills__atab").click();
 });
 
-function f4() {
-  alert("hello world");
-}
+//! Заготовка табов на чистом js
 
-// $(document).ready(function () {
-//   $(".skills__atab").click(function (e) {
-//     e.preventDefault();
-//     $(".skills__atab").removeClass("active");
-//     $(".skills__connecttab").removeClass("active");
-//     $(this).addClass("active");
-//     $($(this).attr("href")).addClass("active");
-//   });
-//   $(".skills__atab:first").click();
-// });
+let aboutme = document.querySelector(".about-me__aa");
+aboutme.onclick = (e) => {
+  e.preventDefault();
+  document.querySelector(".about-me__textsecond").classList.add("active");
+  aboutme.remove();
+};
 
-$(document).ready(function () {
-  $(".about-me__aa").click(function (e) {
-    e.preventDefault();
-    $(".about-me__textsecond").addClass("active");
-    $(this).remove();
+
+
+let hover = document.querySelectorAll(".contact__link");
+let alltextopac = document.querySelectorAll(".contact__opacitytext");
+hover.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    let text = item.lastElementChild;
+
+    text.classList.add("active");
   });
-});
+  item.addEventListener("mouseout", () => {
+    let text = item.lastElementChild;
 
-$(document).ready(function () {
-  $(".header__a").click(function () {
-    $(".burger-menu,.header__nav").toggleClass("active");
+    text.classList.remove("active");
   });
-});
-$(document).ready(function () {
-  $(".contact__link").hover(
-    function () {
-      $(this).find(".contact__opacitytext").slideToggle(300);
-    },
-    function () {
-      $(this).find(".contact__opacitytext").slideToggle(300);
-    }
-  );
 });

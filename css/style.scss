@@ -1055,6 +1055,7 @@ body {
 .contact__name {
    color: white;
    font-size: 20px;
+
 }
 
 .contact__opacitytext {
@@ -1063,7 +1064,17 @@ body {
    right: 24px;
    color: #11c459;
    font-size: 20px;
-   display: none;
+   visibility: hidden;
+   opacity: 0;
+   transition: all 0.3s linear 0s;
+
+   &.active {
+      transition: all 0.3s linear 0s;
+      visibility: visible;
+      opacity: 1;
+   }
+
+
 }
 
 .footer {
