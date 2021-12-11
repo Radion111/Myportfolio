@@ -80,11 +80,13 @@ function burgerMenu() {
 // ! как лутше написать перемение в функции и визвать функцию из вне
 // или перемен
 
-let tablinka = document.querySelector(".skills__atab");
+let tablinka = document.querySelectorAll(".skills__atab");
 let connect_tabs = document.querySelectorAll(".skills__connecttab");
 
 tablinka.forEach((my) => {
-  this.addEventListener("click", f4);
+  this.addEventListener("click", function tabsFunction() {
+    console.log(my);
+  });
 });
 
 function f4() {
@@ -124,6 +126,4 @@ $(document).ready(function () {
       $(this).find(".contact__opacitytext").slideToggle(300);
     }
   );
-  
 });
- 
