@@ -85,7 +85,7 @@ let connect_tabs = document.querySelectorAll(".skills__connecttab");
 
 tablinka.forEach((my) => {
   this.addEventListener("click", function tabsFunction() {
-    console.log(my);
+    this.classList.add("active");
   });
 });
 
