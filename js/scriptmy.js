@@ -89,7 +89,7 @@ tablinka.forEach(function (item) {
   item.addEventListener("click", function (e) {
     e.preventDefault;
     let data = e.target.getAttribute("href").replace("#", "");
-
+    console.log(data);
     tablinka.forEach((child) => {
       child.classList.remove("active");
     });
@@ -113,8 +113,6 @@ aboutme.onclick = (e) => {
   document.querySelector(".about-me__textsecond").classList.add("active");
   aboutme.remove();
 };
-
-
 
 let hover = document.querySelectorAll(".contact__link");
 let alltextopac = document.querySelectorAll(".contact__opacitytext");
