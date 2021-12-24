@@ -43,28 +43,21 @@ const swiperrr = new Swiper(".swiper-container", {
   effect: "fade",
 });
 
-// для медленого перехода между прогрузками
-// ! для медленой загрузки нужно знать роботу с пикселями пройти пару видосиков и зделать
-// Это!!
-$(document).ready(function () {
-  $(".header__a").click(function (e) {
-    e.preventDefault();
-    $("html,body").animate(
-      {
-        scrollTop: $($(this).attr("href")).offset().top + "px",
-      },
-      {
-        duration: 1000,
-        easing: "linear",
-      }
-    );
-    return false;
+
+
+let scroll = document.querySelectorAll(".header__a");
+
+scroll.forEach((item) => {
+  item.addEventListener("click", function Scrolleasyss(event) {
+    event.preventDefault();
+    let id = event.target.getAttribute("href");
+
+    document.querySelector(id).scrollIntoView({
+      block: "center",
+      behavior: "smooth",
+    });
   });
 });
-
-// Для картинок
-
-//! burger menu на чистом js
 
 let burgermenu = document.querySelector(".burger-menu");
 burgermenu.addEventListener("click", burgerMenu);
