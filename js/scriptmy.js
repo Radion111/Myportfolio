@@ -43,8 +43,6 @@ const swiperrr = new Swiper(".swiper-container", {
   effect: "fade",
 });
 
-
-
 let scroll = document.querySelectorAll(".header__a");
 
 scroll.forEach((item) => {
@@ -80,9 +78,9 @@ let connect_tabs = document.querySelectorAll(".skills__connecttab");
 
 tablinka.forEach(function (item) {
   item.addEventListener("click", function (e) {
-    e.preventDefault;
-    let data = e.target.getAttribute("href").replace("#", "");
-    console.log(data);
+    e.preventDefault();
+    let data = e.target.getAttribute("href");
+
     tablinka.forEach((child) => {
       child.classList.remove("active");
     });
@@ -93,8 +91,9 @@ tablinka.forEach(function (item) {
 
     item.classList.add("active");
 
-    document.getElementById(data).classList.add("active");
+    document.querySelector(data).classList.add("active");
   });
+  // ! Надо изменить чтобы не было засореное 
   document.querySelector(".skills__atab").click();
 });
 
