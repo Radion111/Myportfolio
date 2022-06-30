@@ -532,6 +532,13 @@ body {
    left: 0px;
 }
 
+.swiper-container2 {
+   overflow: hidden;
+   position: relative;
+   top: 0px;
+   left: 0px;
+}
+
 .swiper-pagination-bullet {
    width: 20px;
    height: 20px;
@@ -559,6 +566,29 @@ body {
    background-color: white;
 }
 
+.swiper-button-prevv2 {
+   position: absolute;
+   top: 50%;
+   width: 48px;
+   border-radius: 50%;
+   height: 48px;
+   font-size: 18px;
+   left: 150px;
+   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+   z-index: 10;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+   background-color: white;
+
+   i {
+      font-size: 22px;
+      color: #0088cc;
+   }
+}
+
 .swiper-button-prevv i {
    font-size: 22px;
    color: #0088cc;
@@ -568,6 +598,16 @@ body {
    transition: all 0.3s linear 0s;
    background-color: #11c459;
    color: #fff;
+}
+
+.swiper-button-prevv2:hover {
+   transition: all 0.3s linear 0s;
+   background-color: #11c459;
+   color: #fff;
+
+   i {
+      color: #fff;
+   }
 }
 
 .swiper-button-prevv:hover i {
@@ -592,6 +632,29 @@ body {
    background-color: white;
 }
 
+.swiper-button-nextt2 {
+   position: absolute;
+   top: 50%;
+   width: 48px;
+   right: 150px;
+   border-radius: 50%;
+   height: 48px;
+   font-size: 18px;
+   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+   z-index: 10;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+   background-color: white;
+
+   i {
+      font-size: 22px;
+      color: #0088cc;
+   }
+}
+
 .swiper-button-nextt i {
    font-size: 22px;
    color: #0088cc;
@@ -601,6 +664,16 @@ body {
    transition: all 0.3s linear 0s;
    background-color: #11c459;
    color: #fff;
+}
+
+.swiper-button-nextt2:hover {
+   transition: all 0.3s linear 0s;
+   background-color: #11c459;
+   color: #fff;
+
+   i {
+      color: #fff;
+   }
 }
 
 .swiper-button-nextt:hover i {
@@ -1106,7 +1179,15 @@ body {
       left: 0px;
    }
 
+   .swiper-button-prevv2 {
+      left: 0px;
+   }
+
    .swiper-button-nextt {
+      right: 0px;
+   }
+
+   .swiper-button-nextt2 {
       right: 0px;
    }
 }
@@ -1247,7 +1328,15 @@ body {
       display: none;
    }
 
+   .swiper-button-prevv2 {
+      display: none;
+   }
+
    .swiper-button-nextt {
+      display: none;
+   }
+
+   .swiper-button-nextt2 {
       display: none;
    }
 }

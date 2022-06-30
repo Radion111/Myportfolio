@@ -19,7 +19,32 @@ function ibg() {
 }
 
 ibg();
+//? Second Slider
+const swipe2 = new Swiper(".swiper-container2", {
+  navigation: {
+    nextEl: ".swiper-button-nextt2",
+    prevEl: ".swiper-button-prevv2",
+  },
 
+  pagination: {
+    el: ".pag",
+    clickable: true,
+  },
+
+  observer: true,
+  observeParent: true,
+
+  observeSlideChildren: true,
+
+  slidesPerView: 1,
+
+  loop: true,
+
+  effect: "fade",
+});
+
+
+//? First Slider
 const swiperrr = new Swiper(".swiper-container", {
   navigation: {
     nextEl: ".swiper-button-nextt",
